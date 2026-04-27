@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil Laboral Colombia — Andrés Nicolás Riaño Beltrán</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   VARIABLES & RESET
+═══════════════════════════════════════════ */
+:root {
+  --teal:       #1a7a72;
+  --teal-dark:  #145f59;
+  --teal-light: #e6f4f3;
+  --teal-mid:   #b8deda;
+  --dark:       #141f1e;
+  --dark2:      #1e2e2d;
+  --gray:       #6b7b7a;
+  --gray-light: #f2f7f7;
+  --white:      #ffffff;
+  --border:     #cfe4e2;
+  --accent:     #d96b2a;
+  --accent-bg:  #fef3eb;
+  --warn:       #c94040;
+  --warn-bg:    #fdeaea;
+  --green:      #2a7a48;
+  --green-bg:   #e8f5ee;
+  --radius:     10px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Mulish',sans-serif;background:#eef4f3;color:var(--dark);font-size:14px;line-height:1.6;min-height:100vh;}
+
+/* ═══════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════ */
+header{background:linear-gradient(135deg,var(--dark2) 0%,#0e2625 100%);padding:36px 32px 28px;position:relative;overflow:hidden;}
+header::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:rgba(26,122,114,0.18);pointer-events:none;}
+header::after{content:'';position:absolute;bottom:-40px;left:20%;width:160px;height:160px;border-radius:50%;background:rgba(217,107,42,0.1);pointer-events:none;}
+.header-eyebrow{font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal-mid);margin-bottom:8px;}
+header h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:white;margin-bottom:6px;position:relative;z-index:1;}
+header p{color:rgba(255,255,255,0.5);font-size:12.5px;position:relative;z-index:1;}
+.header-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1;}
+.header-chip{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.65);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;}
+
+/* ═══════════════════════════════════════════
+   PROGRESS BAR
+═══════════════════════════════════════════ */
+.progress-wrap{background:white;border-bottom:1px solid var(--border);padding:12px 32px;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+.progress-label{display:flex;justify-content:space-between;font-size:11px;color:var(--gray);margin-bottom:6px;font-weight:600;letter-spacing:0.5px;}
+.progress-bar-bg{height:4px;background:var(--teal-light);border-radius:4px;overflow:hidden;}
+.progress-bar-fill{height:100%;background:var(--teal);border-radius:4px;width:0%;transition:width 0.4s ease;}
+
+/* ═══════════════════════════════════════════
+   MAIN LAYOUT
+═══════════════════════════════════════════ */
+main{max-width:900px;margin:0 auto;padding:32px 20px 80px;}
+
+/* ═══════════════════════════════════════════
+   FORM SECTIONS
+═══════════════════════════════════════════ */
+.form-section{background:white;border-radius:14px;border:1px solid var(--border);overflow:hidden;margin-bottom:20px;box-shadow:0 2px 16px rgba(0,0,0,0.04);transition:box-shadow 0.2s;}
+.form-section:focus-within{box-shadow:0 4px 24px rgba(26,122,114,0.12);}
+.section-head{padding:16px 24px;background:var(--gray-light);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none;}
+.section-head:hover{background:var(--teal-light);}
+.section-icon{width:36px;height:36px;border-radius:9px;background:var(--teal);color:white;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.section-title-text{flex:1;}
+.section-title-text strong{display:block;font-size:14px;font-weight:700;color:var(--dark);}
+.section-title-text span{font-size:11px;color:var(--gray);}
+.section-chevron{font-size:12px;color:var(--gray);transition:transform 0.25s;}
+.section-chevron.open{transform:rotate(180deg);}
+.section-completion{font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:var(--teal-light);color:var(--teal);}
+.section-body{padding:24px;display:none;}
+.section-body.open{display:block;}
+
+/* ═══════════════════════════════════════════
+   FORM GRID & FIELDS
+═══════════════════════════════════════════ */
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+.form-grid.cols-1{grid-template-columns:1fr;}
+.form-grid.cols-2{grid-template-columns:1fr 1fr;}
+.form-grid.cols-3{grid-template-columns:1fr 1fr 1fr;}
+.field{display:flex;flex-direction:column;gap:5px;}
+.field.span-2{grid-column:span 2;}
+.field.span-full{grid-column:1/-1;}
+label{font-size:11px;font-weight:700;letter-spacing:0.5px;color:var(--gray);text-transform:uppercase;}
+label .req{color:var(--warn);margin-left:3px;}
+label .opt{color:#aaa;font-weight:400;text-transform:none;letter-spacing:0;margin-left:4px;font-size:10px;}
+input[type="text"],input[type="email"],input[type="tel"],input[type="date"],input[type="number"],input[type="month"],select,textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius);font-family:'Mulish',sans-serif;font-size:13.5px;color:var(--dark);background:white;transition:border-color 0.2s,box-shadow 0.2s;appearance:none;-webkit-appearance:none;}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(26,122,114,0.1);}
+input::placeholder,textarea::placeholder{color:#b0bfbe;}
+textarea{resize:vertical;min-height:80px;line-height:1.6;}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236b7b7a'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;}
+.radio-group,.check-group{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px;}
+.radio-option,.check-option{display:flex;align-items:center;gap:7px;background:var(--gray-light);border:1.5px solid var(--border);border-radius:7px;padding:8px 14px;cursor:pointer;font-size:13px;transition:all 0.15s;user-select:none;}
+.radio-option:hover,.check-option:hover{background:var(--teal-light);border-color:var(--teal-mid);}
+.radio-option input,.check-option input{accent-color:var(--teal);}
+.radio-option input:checked+span,.check-option input:checked+span{color:var(--teal);font-weight:700;}
+.prefilled{background:var(--teal-light) !important;border-color:var(--teal-mid) !important;color:var(--teal-dark) !important;font-weight:600;}
+.hint{font-size:11px;color:var(--gray);margin-top:2px;line-height:1.5;}
+.sub-divider{height:1px;background:var(--border);margin:20px 0;}
+.sub-label{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.sub-label::after{content:'';flex:1;height:1px;background:var(--teal-light);}
+.inline-warn{background:var(--warn-bg);border:1px solid #f5c6c6;border-left:3px solid var(--warn);border-radius:7px;padding:10px 14px;font-size:12px;color:var(--warn);grid-column:1/-1;line-height:1.6;}
+.inline-note{background:var(--accent-bg);border:1px solid #f5d4bc;border-left:3px solid var(--accent);border-radius:7px;padding:10px 14px;font-size:12px;color:#8b4a1a;grid-column:1/-1;line-height:1.6;}
+.inline-info{background:var(--teal-light);border:1px solid var(--teal-mid);border-left:3px solid var(--teal);border-radius:7px;padding:10px 14px;font-size:12px;color:var(--teal-dark);grid-column:1/-1;line-height:1.6;}
+
+/* ═══════════════════════════════════════════
+   PLATFORM CARDS
+═══════════════════════════════════════════ */
+.platforms-intro{background:var(--teal-light);border:1px solid var(--teal-mid);border-radius:10px;padding:16px 20px;margin-bottom:24px;font-size:13px;color:var(--teal-dark);line-height:1.7;}
+.platforms-intro strong{font-weight:700;}
+.platforms-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.platform-card{border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:box-shadow 0.2s,transform 0.15s;background:white;}
+.platform-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.1);transform:translateY(-1px);}
+.platform-card.selected-si{border-color:var(--green);box-shadow:0 0 0 2px rgba(42,122,72,0.15);}
+.platform-card.selected-no{opacity:0.55;filter:grayscale(0.4);}
+.plat-header{padding:14px 18px;display:flex;align-items:center;gap:12px;}
+.plat-logo{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:white;flex-shrink:0;letter-spacing:-0.5px;}
+.plat-name-block{flex:1;}
+.plat-name{font-size:15px;font-weight:700;color:var(--dark);}
+.plat-url{font-size:11px;color:var(--gray);}
+.plat-badges{display:flex;flex-direction:column;align-items:flex-end;gap:4px;}
+.diff-badge{font-size:9px;font-weight:700;letter-spacing:0.5px;padding:2px 8px;border-radius:20px;}
+.time-badge{font-size:10px;color:var(--gray);}
+.plat-body{padding:0 18px 18px;}
+.plat-desc{font-size:12.5px;color:var(--dark);line-height:1.65;margin-bottom:12px;padding-top:4px;}
+.plat-row{background:var(--gray-light);border-radius:7px;padding:10px 13px;margin-bottom:8px;font-size:12px;line-height:1.6;}
+.plat-row-label{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:3px;}
+.plat-unique{background:#fffbf0;border:1px solid #f5e4a0;border-radius:7px;padding:10px 13px;margin-bottom:8px;font-size:12px;line-height:1.6;color:#7a5c00;}
+.plat-unique-label{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#b8860b;margin-bottom:3px;}
+.plat-extra{background:var(--warn-bg);border:1px solid #f5c6c6;border-radius:7px;padding:10px 13px;margin-bottom:12px;font-size:12px;line-height:1.7;}
+.plat-extra-label{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--warn);margin-bottom:5px;}
+.plat-extra ul{padding-left:16px;}
+.plat-extra li{margin-bottom:2px;}
+.interest-strip{border-top:1px solid var(--border);padding-top:12px;margin-top:4px;}
+.interest-q{font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;}
+.interest-btns{display:flex;gap:6px;}
+.int-btn{flex:1;padding:8px 6px;border:1.5px solid var(--border);border-radius:7px;background:var(--gray-light);font-family:'Mulish',sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:all 0.15s;color:var(--gray);}
+.int-btn:hover{background:var(--teal-light);border-color:var(--teal-mid);}
+.int-btn.active-si{background:var(--green-bg);border-color:var(--green);color:var(--green);}
+.int-btn.active-talvez{background:#fff8e6;border-color:#d4a017;color:#856900;}
+.int-btn.active-no{background:#f5f5f5;border-color:#aaa;color:#666;}
+.int-tip{margin-top:8px;font-size:11.5px;color:var(--teal-dark);background:var(--teal-light);border-radius:6px;padding:8px 12px;line-height:1.6;display:none;}
+.int-tip.visible{display:block;}
+
+/* ═══════════════════════════════════════════
+   PLATFORM COLORS
+═══════════════════════════════════════════ */
+.plat-ct .plat-header{background:linear-gradient(135deg,#fff5f0,#ffe8dd);}
+.plat-ct .plat-logo{background:#e85d1e;}
+.plat-ee .plat-header{background:linear-gradient(135deg,#f0f4ff,#dde8ff);}
+.plat-ee .plat-logo{background:#0057b8;}
+.plat-in .plat-header{background:linear-gradient(135deg,#f0f4ff,#d6e5ff);}
+.plat-in .plat-logo{background:#2557a7;}
+.plat-mg .plat-header{background:linear-gradient(135deg,#f5f0ff,#ead6ff);}
+.plat-mg .plat-logo{background:#7c3aed;}
+.plat-li .plat-header{background:linear-gradient(135deg,#f0f6ff,#d6eaff);}
+.plat-li .plat-logo{background:#0077b5;}
+.plat-bu .plat-header{background:linear-gradient(135deg,#fff0f0,#ffd6d6);}
+.plat-bu .plat-logo{background:#d12020;}
+.plat-to .plat-header{background:linear-gradient(135deg,#f0fff8,#c8f0dc);}
+.plat-to .plat-logo{background:#1a7a48;}
+.plat-se .plat-header{background:linear-gradient(135deg,#fffaf0,#ffe9b8);}
+.plat-se .plat-logo{background:#d4800a;}
+
+/* ═══════════════════════════════════════════
+   REFERENCE CARDS
+═══════════════════════════════════════════ */
+.ref-card{background:var(--gray-light);border-radius:10px;padding:18px;border:1px solid var(--border);}
+.ref-card-title{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.ref-card-title::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ═══════════════════════════════════════════
+   SUBMIT AREA
+═══════════════════════════════════════════ */
+.submit-area{background:white;border-radius:14px;border:1px solid var(--border);padding:28px;text-align:center;margin-top:24px;box-shadow:0 2px 16px rgba(0,0,0,0.04);}
+.submit-area p{color:var(--gray);font-size:12.5px;margin-bottom:18px;line-height:1.7;}
+.btn-submit{background:var(--teal);color:white;border:none;border-radius:10px;padding:16px 48px;font-family:'Mulish',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.3px;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(26,122,114,0.3);display:inline-flex;align-items:center;gap:10px;}
+.btn-submit:hover{background:var(--teal-dark);box-shadow:0 6px 24px rgba(26,122,114,0.4);transform:translateY(-1px);}
+.btn-submit:active{transform:translateY(0);}
+.btn-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+.btn-submit .spinner{width:18px;height:18px;border:2px solid rgba(255,255,255,0.4);border-top-color:white;border-radius:50%;animation:spin 0.7s linear infinite;display:none;}
+.btn-submit.loading .spinner{display:block;}
+.btn-submit.loading .btn-text{display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+#status-msg{display:none;border-radius:10px;padding:16px 20px;font-size:13px;font-weight:600;margin-top:16px;line-height:1.6;text-align:left;}
+#status-msg.success{display:block;background:var(--green-bg);border:1px solid #b8dfc9;color:var(--green);}
+#status-msg.error{display:block;background:var(--warn-bg);border:1px solid #f5c6c6;color:var(--warn);}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media(max-width:700px){
+  header{padding:24px 20px;}
+  main{padding:20px 12px 60px;}
+  .progress-wrap{padding:12px 16px;}
+  .form-grid.cols-2,.form-grid.cols-3{grid-template-columns:1fr;}
+  .field.span-2{grid-column:span 1;}
+  .platforms-grid{grid-template-columns:1fr;}
+  .section-body{padding:16px;}
+  .interest-btns{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header>
+  <div class="header-eyebrow">Formulario de recolección de datos — Empleo Colombia</div>
+  <h1>Andrés Nicolás Riaño Beltrán</h1>
+  <p>Completa las 12 secciones · Un clic envía todo a tu correo</p>
+  <div class="header-chips">
+    <span class="header-chip">🗂️ 8 plataformas</span>
+    <span class="header-chip">📋 12 secciones</span>
+    <span class="header-chip">✅ Datos prellenados del CV</span>
+    <span class="header-chip">📨 Envío directo al correo</span>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     PROGRESS
+══════════════════════════════════════ -->
+<div class="progress-wrap">
+  <div class="progress-label">
+    <span id="progress-text">0 de 12 secciones completadas</span>
+    <span id="progress-pct">0%</span>
+  </div>
+  <div class="progress-bar-bg">
+    <div class="progress-bar-fill" id="progress-fill"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     FORM
+══════════════════════════════════════ -->
+<main>
+<form id="main-form" novalidate>
+  <!-- Formspree routing -->
+  <input type="hidden" name="_replyto" value="Alejo.b.mateus@gmail.com">
+  <input type="hidden" name="email"    value="Alejo.b.mateus@gmail.com">
+  <input type="hidden" name="_subject" value="📋 Datos laborales — Andrés Nicolás Riaño">
+  <!-- Platform interest hidden fields (populated by JS) -->
+  <input type="hidden" name="int_computrabajo" id="int_computrabajo">
+  <input type="hidden" name="int_elempleo"     id="int_elempleo">
+  <input type="hidden" name="int_indeed"       id="int_indeed">
+  <input type="hidden" name="int_magneto"      id="int_magneto">
+  <input type="hidden" name="int_linkedin"     id="int_linkedin">
+  <input type="hidden" name="int_bumeran"      id="int_bumeran">
+  <input type="hidden" name="int_torre"        id="int_torre">
+  <input type="hidden" name="int_sena"         id="int_sena">
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 0 — PLATAFORMAS DE EMPLEO
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="0">
+    <div class="section-head" onclick="toggleSection(0)">
+      <div class="section-icon">🗂️</div>
+      <div class="section-title-text">
+        <strong>Plataformas de empleo en Colombia</strong>
+        <span>Conoce cada una y decide cuáles crear · Información, diferencias y datos específicos</span>
+      </div>
+      <span class="section-completion" id="comp-0">—</span>
+      <span class="section-chevron" id="chev-0">▼</span>
+    </div>
+    <div class="section-body open" id="body-0">
+      <div class="platforms-intro">
+        <strong>¿Por qué crear perfiles en varias plataformas?</strong> Cada plataforma tiene su propio banco de empresas y sus propios algoritmos. Un mismo cargo puede publicarse en Computrabajo pero no en Indeed, o en Magneto pero no en El Empleo. Cuantos más perfiles activos tenga Nicolás, mayor es su visibilidad ante reclutadores. A continuación encontrarás las 8 plataformas más relevantes para su perfil en Colombia, con todo lo que necesitas saber antes de registrarte en cada una. Marca cuáles vas a crear para que quede registrado en el correo.
+      </div>
+      <div class="platforms-grid">
+
+        <!-- COMPUTRABAJO -->
+        <div class="platform-card plat-ct" id="card_computrabajo">
+          <div class="plat-header">
+            <div class="plat-logo">CT</div>
+            <div class="plat-name-block">
+              <div class="plat-name">Computrabajo</div>
+              <div class="plat-url">computrabajo.com.co</div>
+            </div>
+            <div class="plat-badges">
+              <span class="diff-badge" style="background:#fff0e8;color:#b84a00;">★★★ Mayor volumen</span>
+              <span class="time-badge">⏱ ~30 min</span>
+            </div>
+          </div>
+          <div class="plat-body">
+            <p class="plat-desc">La plataforma con mayor cantidad de vacantes en Colombia y toda Latinoamérica. Con más de 15 millones de candidatos registrados, es la primera parada obligatoria para cualquier persona que busca empleo en el país. Las empresas de todos los sectores publican aquí, desde pequeños negocios hasta multinacionales.</p>
+            <div class="plat-row">
+              <div class="plat-row-label">Ideal para</div>
+              Roles operativos, ventas, atención al cliente, logística, auxiliares administrativos, primer empleo, trabajo en Bogotá.
+            </div>
+            <div class="plat-unique">
+              <div class="plat-unique-label">⚡ Lo que la hace diferente</div>
+              Muestra a los empleadores el porcentaje de completitud del currículum. Un perfil al 100% aparece primero en las búsquedas. También permite que los reclutadores te encuentren aunque no te hayas postulado.
+            </div>
+            <div class="plat-extra">
+              <div class="plat-extra-label">📋 Datos extra que pide (además de los básicos)</div>
+              <ul>
+                <li>Turno de trabajo preferido: día, noche o rotativo</li>
+                <li>Zona de Bogotá donde prefiere trabajar (norte, sur, occidente, centro)</li>
+                <li>Disponibilidad para trabajar fines de semana (sí / no)</li>
+                <li>Categoría profesional del cargo que busca</li>
+                <li>Habilidades seleccionadas de su lista desplegable</li>
+              </ul>
+            </div>
+            <div class="interest-strip">
+              <div class="interest-q">¿Vas a crear perfil aquí?</div>
+              <div class="interest-btns">
+                <button type="button" class="int-btn" onclick="setInterest('computrabajo','si',this)">✓ Sí, la quiero</button>
+                <button type="button" class="int-btn" onclick="setInterest('computrabajo','talvez',this)">◐ Tal vez</button>
+                <button type="button" class="int-btn" onclick="setInterest('computrabajo','no',this)">✗ No por ahora</button>
+              </div>
+              <div class="int-tip" id="tip_computrabajo">💡 Consejo: Sube también el PDF del CV como adjunto. Selecciona "Bogotá D.C." como zona y activa la opción de que los reclutadores te puedan contactar directamente.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EL EMPLEO -->
+        <div class="platform-card plat-ee" id="card_elempleo">
+          <div class="plat-header">
+            <div class="plat-logo">EE</div>
+            <div class="plat-name-block">
+              <div class="plat-name">El Empleo</div>
+              <div class="plat-url">elempleo.com</div>
+            </div>
+            <div class="plat-badges">
+              <span class="diff-badge" style="background:#e8f0ff;color:#003d8f;">★★★ Más colombiana</span>
+              <span class="time-badge">⏱ ~35 min</span>
+            </div>
+          </div>
+          <div class="plat-body">
+            <p class="plat-desc">Fundada en Medellín, es la plataforma más tradicional y arraigada del mercado colombiano. Empresas grandes y medianas del sector formal (bancos, retail, salud, manufactura) la usan como primera fuente de candidatos. Es conocida por pedir más datos personales que cualquier otra.</p>
+            <div class="plat-row">
+              <div class="plat-row-label">Ideal para</div>
+              Empresas formales grandes, sector bancario, retail, salud, manufactura. Muy fuerte en Bogotá, Medellín y Cali.
+            </div>
+            <div class="plat-unique">
+              <div class="plat-unique-label">⚡ Lo que la hace diferente</div>
+              Pide referencias personales y laborales directamente en el perfil — dos o más contactos con nombre, teléfono y relación. Muchos reclutadores las llaman antes de invitar a entrevista.
+            </div>
+            <div class="plat-extra">
+              <div class="plat-extra-label">📋 Datos extra que pide (además de los básicos)</div>
+              <ul>
+                <li><strong>Libreta militar</strong> (obligatorio para hombres)</li>
+                <li>Lugar de nacimiento con municipio exacto</li>
+                <li>Estado civil</li>
+                <li>Estrato socioeconómico</li>
+                <li>Disponibilidad para viajar y para cambio de ciudad</li>
+                <li>2 referencias personales o laborales con teléfono</li>
+                <li>Tipo de sangre (opcional pero lo pide)</li>
+              </ul>
+            </div>
+            <div class="interest-strip">
+              <div class="interest-q">¿Vas a crear perfil aquí?</div>
+              <div class="interest-btns">
+                <button type="button" class="int-btn" onclick="setInterest('elempleo','si',this)">✓ Sí, la quiero</button>
+                <button type="button" class="int-btn" onclick="setInterest('elempleo','talvez',this)">◐ Tal vez</button>
+                <button type="button" class="int-btn" onclick="setInterest('elempleo','no',this)">✗ No por ahora</button>
+              </div>
+              <div class="int-tip" id="tip_elempleo">💡 Consejo: Ten lista la información de libreta militar y los teléfonos de al menos 2 referencias antes de empezar. Es la plataforma que más datos pide, pero también accede a los mejores trabajos formales.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INDEED -->
+        <div class="platform-card plat-in" id="card_indeed">
+          <div class="plat-header">
+            <div class="plat-logo">IN</div>
+            <div class="plat-name-block">
+              <div class="plat-name">Indeed Colombia</div>
+              <div class="plat-url">co.indeed.com</div>
+            </div>
+            <div class="plat-badges">
+              <span class="diff-badge" style="background:#e8f0ff;color:#1a3d8f;">✦ Más fácil y rápido</span>
+              <span class="time-badge">⏱ ~10 min</span>
+            </div>
+          </div>
+          <div class="plat-body">
+            <p class="plat-desc">La plataforma de empleo número 1 del mundo con fuerte presencia en Colombia. Es la más fácil de configurar porque lee el PDF del CV automáticamente y extrae toda la información. Muchas empresas internacionales con sede en Colombia publican exclusivamente aquí.</p>
+            <div class="plat-row">
+              <div class="plat-row-label">Ideal para</div>
+              Empresas internacionales, BPO, call centers, roles de servicio al cliente, logística. También aparecen muchas ofertas de agencias de empleo temporales.
+            </div>
+            <div class="plat-unique">
+              <div class="plat-unique-label">⚡ Lo que la hace diferente</div>
+              Sube el PDF del CV y la plataforma extrae nombre, experiencias y educación automáticamente. El perfil puede quedar funcional en menos de 10 minutos. También permite postularse con un solo clic.
+            </div>
+            <div class="plat-extra">
+              <div class="plat-extra-label">📋 Datos extra que pide (además de los básicos)</div>
+              <ul>
+                <li>Título del cargo que está buscando actualmente</li>
+                <li>Distancia máxima aceptada desde el lugar de trabajo</li>
+                <li>Con qué rapidez puede iniciar (inmediato / 2 semanas / 1 mes)</li>
+                <li>Autorización para trabajar en Colombia (sí / no)</li>
+              </ul>
+            </div>
+            <div class="interest-strip">
+              <div class="interest-q">¿Vas a crear perfil aquí?</div>
+              <div class="interest-btns">
+                <button type="button" class="int-btn" onclick="setInterest('indeed','si',this)">✓ Sí, la quiero</button>
+                <button type="button" class="int-btn" onclick="setInterest('indeed','talvez',this)">◐ Tal vez</button>
+                <button type="button" class="int-btn" onclick="setInterest('indeed','no',this)">✗ No por ahora</button>
+              </div>
+              <div class="int-tip" id="tip_indeed">💡 Consejo: Entra con la cuenta de Google de Nicolás y sube directamente el PDF del CV. Indeed procesa todo en 2 minutos. Revisa que haya leído bien los datos antes de guardar.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAGNETO -->
+        <div class="platform-card plat-mg" id="card_magneto">
+          <div class="plat-header">
+            <div class="plat-logo">MG</div>
+            <div class="plat-name-block">
+              <div class="plat-name">Magneto</div>
+              <div class="plat-url">magneto365.com/co</div>
+            </div>
+            <div class="plat-badges">
+              <span class="diff-badge" style="background:#f0eaff;color:#5b28b0;">★★ Primer empleo</span>
+              <span class="time-badge">⏱ ~20 min</span>
+            </div>
+          </div>
+          <div class="plat-body">
+            <p class="plat-desc">Plataforma colombiana enfocada en talento joven y primer empleo. Usa inteligencia artificial para hacer "match" entre el perfil del candidato y las vacantes disponibles. Mientras más completo esté el perfil, mejores y más numerosas son las ofertas que muestra el algoritmo.</p>
+            <div class="plat-row">
+              <div class="plat-row-label">Ideal para</div>
+              Jóvenes entre 18-28 años, primer empleo, roles operativos, atención al cliente, logística, ayudantes y auxiliares en general.
+            </div>
+            <div class="plat-unique">
+              <div class="plat-unique-label">⚡ Lo que la hace diferente</div>
+              Su algoritmo de matching automático conecta el perfil con vacantes sin necesidad de buscarlas manualmente. También incluye tests de habilidades que, si se completan, aumentan la visibilidad del perfil ante los reclutadores.
+            </div>
+            <div class="plat-extra">
+              <div class="plat-extra-label">📋 Datos extra que pide (además de los básicos)</div>
+              <ul>
+                <li>Habilidades blandas preferidas (lista de selección múltiple)</li>
+                <li>Nivel de inglés en escala propia de la plataforma</li>
+                <li>Tipo de ambiente de trabajo preferido (dinámico, tranquilo, mixto)</li>
+                <li>Hace tests de competencias opcionales pero recomendados</li>
+                <li>Palabras clave de búsqueda (ej: "servicio al cliente", "logística")</li>
+              </ul>
+            </div>
+            <div class="interest-strip">
+              <div class="interest-q">¿Vas a crear perfil aquí?</div>
+              <div class="interest-btns">
+                <button type="button" class="int-btn" onclick="setInterest('magneto','si',this)">✓ Sí, la quiero</button>
+                <button type="button" class="int-btn" onclick="setInterest('magneto','talvez',this)">◐ Tal vez</button>
+                <button type="button" class="int-btn" onclick="setInterest('magneto','no',this)">✗ No por ahora</button>
+              </div>
+              <div class="int-tip" id="tip_magneto">💡 Consejo: Completa los tests de habilidades que recomienda Magneto. Toman 5 minutos y pueden duplicar la visibilidad del perfil. Marca todas las habilidades blandas que apliquen con confianza.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div class="platform-card plat-li" id="card_linkedin">
+          <div class="plat-header">
+            <div class="plat-logo">Li</div>
+            <div class="plat-name-block">
+              <div class="plat-name">LinkedIn</div>
+              <div class="plat-url">linkedin.com</div>
+            </div>
+            <div class="plat-badges">
+              <span class="diff-badge" style="background:#dff0ff;color:#005b8a;">✦ Red profesional</span>
+              <span class="time-badge">⏱ ~40 min</span>
+            </div>
+          </div>
+          <div class="plat-body">
+            <p class="plat-desc">La red profesional más grande del mundo con más de 1 billón de usuarios. En Colombia es usada principalmente por empresas medianas y grandes, agencias de recursos humanos y multinacionales. No es solo para buscar trabajo — es tu reputación digital profesional visible para siempre.</p>
+            <div class="plat-row">
+              <div class="plat-row-label">Ideal para</div>
+              Networking, empresas internacionales, roles creativos y digitales, agencias de fotografía, marketing, medios. Es una inversión a largo plazo en la carrera de Nicolás.
+            </div>
+            <div class="plat-unique">
+              <div class="plat-unique-label">⚡ Lo que la hace diferente</div>
+              Los reclutadores te buscan activamente en LinkedIn — no solo esperas que lleguen las ofertas. Tener el perfil "abierto a trabajar" activa un algoritmo que te muestra a headhunters. Un buen perfil puede reemplazar el CV en muchas empresas.
+            </div>
+            <div class="plat-extra">
+              <div class="plat-extra-label">📋 Datos extra que pide (además de los básicos)</div>
+              <ul>
+                <li>Titular profesional (120 caracteres — lo más importante del perfil)</li>
+                <li>URL personalizada del perfil (ej: linkedin.com/in/nicolasriano)</li>
+                <li>Foto de portada (imagen de fondo del perfil)</li>
+                <li>Sección "Acerca de" — resumen en primera persona</li>
+                <li>Aptitudes (habilidades) avaladas por contactos</li>
+                <li>Recomendaciones escritas de personas que lo conocen</li>
+                <li>Idiomas con nivel certificado</li>
+              </ul>
+            </div>
+            <div class="interest-strip">
+              <div class="interest-q">¿Vas a crear perfil aquí?</div>
+              <div class="interest-btns">
+                <button type="button" class="int-btn" onclick="setInterest('linkedin','si',this)">✓ Sí, la quiero</button>
+                <button type="button" class="int-btn" onclick="setInterest('linkedin','talvez',this)">◐ Tal vez</button>
+                <button type="button" class="int-btn" onclick="setInterest('linkedin','no',this)">✗ No por ahora</button>
+              </div>
+              <div class="int-tip" id="tip_linkedin">💡 Consejo: El titular de LinkedIn es lo primero que lee cualquier reclutador. "Fotógrafo Freelance · Auxiliar Operativo · Bogotá" comunica perfectamente el perfil de Nicolás en 5 palabras. Activa "Abierto a trabajar" una vez creado.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BUMERAN -->
+        <div class="platform-card plat-bu" id="card_bumeran">
+          <div class="plat-header">
+            <div class="plat-logo">BU</div>
+            <div class="plat-name-block">
+              <div class="plat-name">Bumeran</div>
+              <div class="plat-url">bumeran.com.co</div>
+            </div>
+            <div class="plat-badges">
+              <span class="diff-badge" style="background:#fff0f0;color:#8a0000;">★ Latinoamérica</span>
+              <span class="time-badge">⏱ ~20 min</span>
+            </div>
+          </div>
+          <div class="plat-body">
+            <p class="plat-desc">Plataforma de origen argentino con fuerte presencia en Colombia, Argentina, Chile y Perú. Su interfaz moderna y limpia la hace fácil de usar. Es especialmente usada por empresas con operaciones en varios países latinoamericanos y por el sector retail y BPO.</p>
+            <div class="plat-row">
+              <div class="plat-row-label">Ideal para</div>
+              Retail, BPO, call centers, empresas multinacionales con sede en Colombia, logística regional, atención al cliente.
+            </div>
+            <div class="plat-unique">
+              <div class="plat-unique-label">⚡ Lo que la hace diferente</div>
+              Permite configurar alertas por correo para recibir automáticamente las vacantes nuevas que coincidan con el perfil. También permite buscar trabajo en otros países latinoamericanos con el mismo perfil sin crear una cuenta nueva.
+            </div>
+            <div class="plat-extra">
+              <div class="plat-extra-label">📋 Datos extra que pide (además de los básicos)</div>
+              <ul>
+                <li>Zona de la ciudad donde vive (norte, sur, occidente, centro de Bogotá)</li>
+                <li>Expectativa salarial en pesos colombianos (COP)</li>
+                <li>Disponibilidad para reubicación internacional</li>
+                <li>Área profesional principal (categoría de la oferta que busca)</li>
+              </ul>
+            </div>
+            <div class="interest-strip">
+              <div class="interest-q">¿Vas a crear perfil aquí?</div>
+              <div class="interest-btns">
+                <button type="button" class="int-btn" onclick="setInterest('bumeran','si',this)">✓ Sí, la quiero</button>
+                <button type="button" class="int-btn" onclick="setInterest('bumeran','talvez',this)">◐ Tal vez</button>
+                <button type="button" class="int-btn" onclick="setInterest('bumeran','no',this)">✗ No por ahora</button>
+              </div>
+              <div class="int-tip" id="tip_bumeran">💡 Consejo: Bumeran es de las más rápidas de configurar. Con los datos básicos y el PDF del CV, un perfil funcional queda listo en menos de 20 minutos. Activa las alertas de correo para recibir vacantes nuevas cada día.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TORRE.AI -->
+        <div class="platform-card plat-to" id="card_torre">
+          <div class="plat-header">
+            <div class="plat-logo">To</div>
+            <div class="plat-name-block">
+              <div class="plat-name">Torre.ai</div>
+              <div class="plat-url">torre.ai</div>
+            </div>
+            <div class="plat-badges">
+              <span class="diff-badge" style="background:#e0f5ea;color:#0d5c2e;">✦ IA + creativos</span>
+              <span class="time-badge">⏱ ~25 min</span>
+            </div>
+          </div>
+          <div class="plat-body">
+            <p class="plat-desc">Startup colombiana fundada por Alexander Torrenegra, con alianza oficial con la Cámara de Comercio de Bogotá. Usa inteligencia artificial para hacer matching entre candidatos y empresas. No usa currículum tradicional sino un "genoma profesional" — un mapa de habilidades, rasgos y metas. Muy fuerte para roles creativos y digitales.</p>
+            <div class="plat-row">
+              <div class="plat-row-label">Ideal para</div>
+              Fotografía, diseño, marketing digital, roles remotos, startups, empresas tech. Perfecta para el perfil creativo y digital de Nicolás.
+            </div>
+            <div class="plat-unique">
+              <div class="plat-unique-label">⚡ Lo que la hace diferente</div>
+              No usa un CV tradicional. Crea un "genoma profesional" con habilidades calificadas por nivel (1-5), rasgos de personalidad laboral y un bio en primera persona. Las empresas ven directamente las habilidades, no solo el cargo. Excelente para quienes tienen portafolio visual.
+            </div>
+            <div class="plat-extra">
+              <div class="plat-extra-label">📋 Datos extra que pide (además de los básicos)</div>
+              <ul>
+                <li>Autoevaluación de habilidades con nivel del 1 al 5</li>
+                <li>Estilo de trabajo preferido (presencial, remoto, asincrónico)</li>
+                <li>Bio en primera persona (presentación breve y auténtica)</li>
+                <li>Links a portfolio, Instagram profesional, GitHub, Behance</li>
+                <li>Rasgos de personalidad laboral (selección de lista)</li>
+              </ul>
+            </div>
+            <div class="interest-strip">
+              <div class="interest-q">¿Vas a crear perfil aquí?</div>
+              <div class="interest-btns">
+                <button type="button" class="int-btn" onclick="setInterest('torre','si',this)">✓ Sí, la quiero</button>
+                <button type="button" class="int-btn" onclick="setInterest('torre','talvez',this)">◐ Tal vez</button>
+                <button type="button" class="int-btn" onclick="setInterest('torre','no',this)">✗ No por ahora</button>
+              </div>
+              <div class="int-tip" id="tip_torre">💡 Consejo: Torre es excelente para el perfil fotográfico de Nicolás. Agrega el link de su Instagram o portafolio de fotografía — en Torre eso vale más que el CV. Marca "Fotografía" como habilidad nivel 4 o 5.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SENA SPE -->
+        <div class="platform-card plat-se" id="card_sena">
+          <div class="plat-header">
+            <div class="plat-logo">SE</div>
+            <div class="plat-name-block">
+              <div class="plat-name">SENA — Servicio Público de Empleo</div>
+              <div class="plat-url">spe.sena.edu.co</div>
+            </div>
+            <div class="plat-badges">
+              <span class="diff-badge" style="background:#fff8e0;color:#8a5c00;">★ Estatal · Gratis</span>
+              <span class="time-badge">⏱ ~20 min</span>
+            </div>
+          </div>
+          <div class="plat-body">
+            <p class="plat-desc">El Servicio Público de Empleo del SENA es la bolsa de trabajo oficial del gobierno colombiano. Es completamente gratuita y tiene un gran volumen de vacantes del sector formal, especialmente en empresas que contratan a través del Estado o que están obligadas a publicar allí. Muy útil para acceder a contratos formales con todas las prestaciones.</p>
+            <div class="plat-row">
+              <div class="plat-row-label">Ideal para</div>
+              Primer empleo formal, empresas que buscan perfiles de bachiller, roles en manufactura, logística, servicios y comercio. El SENA también ofrece programas de formación gratuita vinculados a las vacantes.
+            </div>
+            <div class="plat-unique">
+              <div class="plat-unique-label">⚡ Lo que la hace diferente</div>
+              Al ser la plataforma estatal, muchas empresas grandes están obligadas a publicar sus vacantes de bachillerato aquí. También conecta con los programas gratuitos de formación del SENA que pueden complementar el perfil de Nicolás.
+            </div>
+            <div class="plat-extra">
+              <div class="plat-extra-label">📋 Datos extra que pide (además de los básicos)</div>
+              <ul>
+                <li>Código DANE del municipio de residencia (Bogotá: 11001)</li>
+                <li>Número de cédula para validar identidad en RUAF</li>
+                <li>EPS actual (si aplica) o si está sin afiliación</li>
+                <li>Tipo de discapacidad (si aplica — opcional)</li>
+                <li>Si es víctima del conflicto armado (opcional)</li>
+              </ul>
+            </div>
+            <div class="interest-strip">
+              <div class="interest-q">¿Vas a crear perfil aquí?</div>
+              <div class="interest-btns">
+                <button type="button" class="int-btn" onclick="setInterest('sena','si',this)">✓ Sí, la quiero</button>
+                <button type="button" class="int-btn" onclick="setInterest('sena','talvez',this)">◐ Tal vez</button>
+                <button type="button" class="int-btn" onclick="setInterest('sena','no',this)">✗ No por ahora</button>
+              </div>
+              <div class="int-tip" id="tip_sena">💡 Consejo: El SENA SPE es una plataforma poco conocida pero muy valiosa para primer empleo. Muchas empresas grandes solo publican vacantes de bachiller allí porque están obligadas por ley. Vale la pena los 20 minutos de configuración.</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end platforms-grid -->
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 1 — CUENTA
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="1">
+    <div class="section-head" onclick="toggleSection(1)">
+      <div class="section-icon">🔑</div>
+      <div class="section-title-text">
+        <strong>Cuenta para las plataformas</strong>
+        <span>Un correo y una contraseña que usará en todos los registros</span>
+      </div>
+      <span class="section-completion" id="comp-1">—</span>
+      <span class="section-chevron" id="chev-1">▼</span>
+    </div>
+    <div class="section-body" id="body-1">
+      <div class="form-grid cols-1">
+        <div class="inline-info">💡 <strong>Recomendación:</strong> Usa un correo creado específicamente para la búsqueda de empleo (ej: nicolas.riano.trabajo@gmail.com). Así los correos de reclutadores no se mezclan con mensajes personales y es más fácil hacer seguimiento.</div>
+      </div>
+      <div class="form-grid cols-2" style="margin-top:16px;">
+        <div class="field">
+          <label>Correo electrónico <span class="req">*</span></label>
+          <input type="email" name="correo_plataformas" placeholder="nicolas.riano@gmail.com">
+          <p class="hint">El mismo correo para todas las plataformas. Facilita el seguimiento.</p>
+        </div>
+        <div class="field">
+          <label>Contraseña sugerida <span class="req">*</span></label>
+          <input type="text" name="contrasena_plataformas" placeholder="Mín. 8 caracteres — ej: Nicolas2025!">
+          <p class="hint">Usa la misma en todas para no perder acceso. Anótala también en un lugar seguro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 2 — DATOS PERSONALES
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="2">
+    <div class="section-head" onclick="toggleSection(2)">
+      <div class="section-icon">🪪</div>
+      <div class="section-title-text">
+        <strong>Datos personales</strong>
+        <span>Identidad, contacto, residencia y situación militar</span>
+      </div>
+      <span class="section-completion" id="comp-2">—</span>
+      <span class="section-chevron" id="chev-2">▼</span>
+    </div>
+    <div class="section-body" id="body-2">
+      <div class="sub-label">Identidad</div>
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>Nombre completo <span class="req">*</span></label>
+          <input type="text" name="nombre_completo" value="Andres Nicolas Riaño Beltrán" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Número de cédula <span class="req">*</span></label>
+          <input type="text" name="cedula" placeholder="Ej: 1020123456">
+          <p class="hint">Sin puntos ni espacios. Lo piden todas las plataformas colombianas.</p>
+        </div>
+        <div class="field">
+          <label>Fecha de nacimiento <span class="req">*</span></label>
+          <input type="date" name="fecha_nacimiento">
+        </div>
+        <div class="field">
+          <label>Lugar de nacimiento <span class="req">*</span></label>
+          <input type="text" name="lugar_nacimiento" placeholder="Ciudad y Departamento">
+          <p class="hint">El Empleo pide ciudad Y municipio exacto.</p>
+        </div>
+        <div class="field">
+          <label>Género <span class="req">*</span></label>
+          <select name="genero">
+            <option value="">Seleccionar...</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+            <option>No binario</option>
+            <option>Prefiero no decir</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Estado civil <span class="req">*</span></label>
+          <select name="estado_civil">
+            <option value="">Seleccionar...</option>
+            <option>Soltero/a</option>
+            <option>Casado/a</option>
+            <option>Unión libre</option>
+            <option>Divorciado/a</option>
+            <option>Viudo/a</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Tipo de sangre <span class="opt">opcional</span></label>
+          <select name="tipo_sangre">
+            <option value="">Seleccionar...</option>
+            <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+          </select>
+          <p class="hint">El Empleo lo pide. También útil para hojas de vida completas.</p>
+        </div>
+      </div>
+      <div class="sub-divider"></div>
+      <div class="sub-label">Contacto y residencia</div>
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>Número de celular <span class="req">*</span></label>
+          <input type="tel" name="celular" value="+57 321 240 2173" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Estrato socioeconómico <span class="req">*</span></label>
+          <select name="estrato">
+            <option value="">Seleccionar...</option>
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+          </select>
+          <p class="hint">El Empleo y algunas otras plataformas lo piden obligatoriamente.</p>
+        </div>
+        <div class="field span-2">
+          <label>Dirección completa <span class="req">*</span></label>
+          <input type="text" name="direccion" placeholder="Ej: Cra. 70 #Calle 16 Sur - 61, Apto 201">
+        </div>
+        <div class="field">
+          <label>Barrio <span class="req">*</span></label>
+          <input type="text" name="barrio" placeholder="Nombre del barrio">
+        </div>
+        <div class="field">
+          <label>Localidad <span class="req">*</span></label>
+          <input type="text" name="localidad" placeholder="Ej: Kennedy, Engativá, Suba...">
+        </div>
+        <div class="field">
+          <label>Ciudad <span class="req">*</span></label>
+          <input type="text" name="ciudad" value="Bogotá D.C." class="prefilled">
+        </div>
+        <div class="field">
+          <label>Zona de Bogotá <span class="opt">opcional</span></label>
+          <select name="zona_bogota">
+            <option value="">Seleccionar...</option>
+            <option>Norte</option><option>Sur</option>
+            <option>Occidente</option><option>Centro</option><option>Oriente</option>
+          </select>
+          <p class="hint">Computrabajo y Bumeran filtran ofertas por zona de la ciudad.</p>
+        </div>
+      </div>
+      <div class="sub-divider"></div>
+      <div class="sub-label">Situación militar</div>
+      <div class="form-grid cols-1">
+        <div class="inline-warn">⚠️ <strong>Obligatorio para hombres colombianos.</strong> El Empleo y el SENA SPE piden este dato en el registro. Sin él, no puedes completar el perfil en esas plataformas.</div>
+        <div class="field">
+          <label>Estado libreta militar <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="libreta_militar" value="Tiene libreta militar"><span>Tiene libreta</span></label>
+            <label class="radio-option"><input type="radio" name="libreta_militar" value="Primera clase (activo o reserva)"><span>Primera clase</span></label>
+            <label class="radio-option"><input type="radio" name="libreta_militar" value="En trámite"><span>En trámite</span></label>
+            <label class="radio-option"><input type="radio" name="libreta_militar" value="No aplica / exento"><span>No aplica / exento</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 3 — EDUCACIÓN
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="3">
+    <div class="section-head" onclick="toggleSection(3)">
+      <div class="section-icon">🎓</div>
+      <div class="section-title-text">
+        <strong>Educación</strong>
+        <span>Bachillerato — varios campos ya están prellenados del CV</span>
+      </div>
+      <span class="section-completion" id="comp-3">—</span>
+      <span class="section-chevron" id="chev-3">▼</span>
+    </div>
+    <div class="section-body" id="body-3">
+      <div class="form-grid cols-1">
+        <div class="inline-info">💡 Las plataformas colombianas piden el inicio Y fin del bachillerato, no solo el año de grado. Si no recuerda el año exacto de inicio, calcula: año de grado (2022) menos 11 años de bachillerato = aprox. 2011 o 2012 si repitió algún año.</div>
+      </div>
+      <div class="form-grid cols-2" style="margin-top:16px;">
+        <div class="field">
+          <label>Nivel educativo <span class="req">*</span></label>
+          <input type="text" name="nivel_educativo" value="Bachillerato Académico" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Estado <span class="req">*</span></label>
+          <input type="text" name="estado_educativo" value="Graduado" class="prefilled">
+        </div>
+        <div class="field span-2">
+          <label>Institución educativa <span class="req">*</span></label>
+          <input type="text" name="institucion" value="Liceo Antonio de Toledo" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Año de inicio aprox. <span class="req">*</span></label>
+          <input type="text" name="ano_inicio_estudio" placeholder="Ej: 2011 o 2012">
+          <p class="hint">Muchas plataformas piden inicio y fin del bachillerato.</p>
+        </div>
+        <div class="field">
+          <label>Año de grado <span class="req">*</span></label>
+          <input type="text" name="ano_grado" value="2022" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Ciudad <span class="req">*</span></label>
+          <input type="text" name="ciudad_estudio" value="Bogotá D.C." class="prefilled">
+        </div>
+        <div class="field">
+          <label>¿Estudia actualmente? <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="estudia_actualmente" value="Sí"><span>Sí</span></label>
+            <label class="radio-option"><input type="radio" name="estudia_actualmente" value="No"><span>No</span></label>
+          </div>
+        </div>
+        <div class="field span-2">
+          <label>¿Qué estudia? (si aplica) <span class="opt">opcional</span></label>
+          <input type="text" name="que_estudia" placeholder="Carrera, institución y semestre actual">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 4 — EXPERIENCIA: BECKER PUB
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="4">
+    <div class="section-head" onclick="toggleSection(4)">
+      <div class="section-icon">🍺</div>
+      <div class="section-title-text">
+        <strong>Experiencia — Becker Pub</strong>
+        <span>Soporte en negocio familiar · 2022 – 2024</span>
+      </div>
+      <span class="section-completion" id="comp-4">—</span>
+      <span class="section-chevron" id="chev-4">▼</span>
+    </div>
+    <div class="section-body" id="body-4">
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>Cargo <span class="req">*</span></label>
+          <input type="text" name="exp1_cargo" value="Auxiliar Administrativo / Soporte Familiar" class="prefilled">
+          <p class="hint">Puedes ajustar el título si Nicolás prefiere otro nombre para el cargo.</p>
+        </div>
+        <div class="field">
+          <label>Empresa <span class="req">*</span></label>
+          <input type="text" name="exp1_empresa" value="Becker Pub" class="prefilled">
+        </div>
+        <div class="field span-2">
+          <label>Dirección de la empresa <span class="opt">opcional</span></label>
+          <input type="text" name="exp1_direccion" value="Cra. 70 #Calle 16 Sur - 61, Bogotá" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Sector / industria <span class="req">*</span></label>
+          <select name="exp1_sector">
+            <option value="">Seleccionar...</option>
+            <option selected>Gastronomía / Restaurantes y bares</option>
+            <option>Comercio y ventas</option>
+            <option>Servicios</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Ciudad <span class="req">*</span></label>
+          <input type="text" name="exp1_ciudad" value="Bogotá D.C." class="prefilled">
+        </div>
+        <div class="field">
+          <label>Fecha de inicio <span class="req">*</span></label>
+          <input type="month" name="exp1_inicio" value="2022-01">
+        </div>
+        <div class="field">
+          <label>Fecha de fin <span class="req">*</span></label>
+          <input type="month" name="exp1_fin" value="2024-12">
+        </div>
+        <div class="field span-full">
+          <label>Descripción de funciones <span class="req">*</span></label>
+          <textarea name="exp1_descripcion" rows="4">Brindé soporte en la gestión administrativa del negocio, asegurando el control actualizado de inventarios e insumos, el seguimiento oportuno de pedidos a proveedores y el registro ordenado de los movimientos de caja. Mi participación contribuyó a mantener la operación del establecimiento organizada y sin interrupciones.</textarea>
+        </div>
+        <div class="field">
+          <label>Motivo de retiro <span class="opt">opcional</span></label>
+          <input type="text" name="exp1_retiro" placeholder="Ej: Búsqueda de nuevas oportunidades">
+          <p class="hint">Algunas plataformas lo piden. "Búsqueda de crecimiento profesional" es una buena respuesta.</p>
+        </div>
+        <div class="field">
+          <label>Salario devengado aprox. <span class="opt">opcional</span></label>
+          <input type="text" name="exp1_salario" placeholder="Ej: No remunerado / Apoyo en especie">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 5 — EXPERIENCIA: FOTÓGRAFO
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="5">
+    <div class="section-head" onclick="toggleSection(5)">
+      <div class="section-icon">📸</div>
+      <div class="section-title-text">
+        <strong>Experiencia — Fotógrafo Freelance</strong>
+        <span>Trabajo independiente · 2022 – Presente</span>
+      </div>
+      <span class="section-completion" id="comp-5">—</span>
+      <span class="section-chevron" id="chev-5">▼</span>
+    </div>
+    <div class="section-body" id="body-5">
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>Cargo <span class="req">*</span></label>
+          <input type="text" name="exp2_cargo" value="Fotógrafo Freelance" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Empresa / Cliente <span class="req">*</span></label>
+          <input type="text" name="exp2_empresa" value="Independiente" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Sector <span class="req">*</span></label>
+          <input type="text" name="exp2_sector" value="Fotografía y Medios / Servicios creativos" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Tipo de empleo <span class="req">*</span></label>
+          <input type="text" name="exp2_tipo" value="Freelance / Independiente" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Fecha de inicio <span class="req">*</span></label>
+          <input type="month" name="exp2_inicio" value="2022-01">
+        </div>
+        <div class="field">
+          <label>¿Sigue activo? <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="exp2_activo" value="Sí, trabajo actual" checked><span>Sí, actual</span></label>
+            <label class="radio-option"><input type="radio" name="exp2_activo" value="No, terminado"><span>No</span></label>
+          </div>
+        </div>
+        <div class="field span-full">
+          <label>Descripción de funciones <span class="req">*</span></label>
+          <textarea name="exp2_descripcion" rows="4">Trabajo de forma independiente cubriendo eventos (matrimonios, grados, fiestas) y sesiones fotográficas. Me encargo de capturar los momentos importantes, editar el material con Adobe Photoshop, Lightroom y Premiere, y entregar resultados con excelente calidad. Gestiono la comunicación directa con cada cliente, coordinando detalles como tiempos, estilo y entregas finales.</textarea>
+        </div>
+        <div class="field span-full">
+          <label>Link de portafolio o Instagram <span class="opt">opcional</span></label>
+          <input type="text" name="exp2_portafolio" placeholder="Ej: instagram.com/nicolasrianofoto o link de Google Drive">
+          <p class="hint">Muy importante para Torre.ai y LinkedIn. Un portafolio visual puede reemplazar el CV en roles creativos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 6 — EXPERIENCIA: LOGÍSTICA
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="6">
+    <div class="section-head" onclick="toggleSection(6)">
+      <div class="section-icon">🎪</div>
+      <div class="section-title-text">
+        <strong>Experiencia — Auxiliar de Logística en Eventos</strong>
+        <span>Varios empleadores · 2022 – 2024</span>
+      </div>
+      <span class="section-completion" id="comp-6">—</span>
+      <span class="section-chevron" id="chev-6">▼</span>
+    </div>
+    <div class="section-body" id="body-6">
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>Cargo <span class="req">*</span></label>
+          <input type="text" name="exp3_cargo" value="Auxiliar de Logística en Eventos" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Empresa <span class="req">*</span></label>
+          <input type="text" name="exp3_empresa" value="Varios empleadores" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Sector <span class="req">*</span></label>
+          <input type="text" name="exp3_sector" value="Entretenimiento / Producción de eventos" class="prefilled">
+        </div>
+        <div class="field">
+          <label>Ciudad <span class="req">*</span></label>
+          <input type="text" name="exp3_ciudad" value="Bogotá D.C." class="prefilled">
+        </div>
+        <div class="field">
+          <label>Fecha de inicio <span class="req">*</span></label>
+          <input type="month" name="exp3_inicio" value="2022-01">
+        </div>
+        <div class="field">
+          <label>Fecha de fin <span class="req">*</span></label>
+          <input type="month" name="exp3_fin" value="2024-12">
+        </div>
+        <div class="field span-full">
+          <label>Descripción de funciones <span class="req">*</span></label>
+          <textarea name="exp3_descripcion" rows="4">Apoyo en la organización y ejecución de eventos, incluyendo montaje de espacios, coordinación de tiempos y acompañamiento durante la actividad. Aseguré la correcta ejecución de las actividades, gestioné situaciones inesperadas y me adapté a las necesidades operativas para mantener la eficiencia del evento. Principalmente en áreas de staff y coordinación.</textarea>
+        </div>
+        <div class="field span-full">
+          <label>Empresas o eventos específicos que recuerde <span class="opt">opcional</span></label>
+          <input type="text" name="exp3_especificos" placeholder="Ej: Evento Coliseo, Agencia XYZ, Feria del Libro...">
+          <p class="hint">Si recuerda algún empleador o evento específico, añádelo. Suma credibilidad y puede ser verificado por reclutadores.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 7 — TEXTOS DEL PERFIL
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="7">
+    <div class="section-head" onclick="toggleSection(7)">
+      <div class="section-icon">✍️</div>
+      <div class="section-title-text">
+        <strong>Textos del perfil</strong>
+        <span>Resumen profesional, titular de LinkedIn y habilidades — listos para copiar y pegar</span>
+      </div>
+      <span class="section-completion" id="comp-7">—</span>
+      <span class="section-chevron" id="chev-7">▼</span>
+    </div>
+    <div class="section-body" id="body-7">
+      <div class="form-grid cols-1">
+        <div class="inline-note">💡 Los textos de abajo están basados en el CV existente y están optimizados para cada tipo de plataforma. Puedes editarlos directamente aquí antes de enviar — el correo llegará con la versión final lista para copiar y pegar en cada plataforma.</div>
+        <div class="field">
+          <label>Resumen profesional — versión larga (Computrabajo, El Empleo, LinkedIn) <span class="req">*</span></label>
+          <textarea name="resumen_largo" rows="5">Profesional con experiencia en atención al cliente y soporte operativo en entornos dinámicos, enfocado en la optimización del servicio, la resolución efectiva de situaciones y la generación de experiencias positivas. Destaco por mi adaptabilidad, organización y habilidades comunicativas. Cuento con conocimientos en herramientas digitales y edición de contenido, lo que me permite aportar valor en procesos operativos y de apoyo administrativo.</textarea>
+        </div>
+        <div class="field">
+          <label>Resumen profesional — versión corta (Indeed, Magneto, Bumeran) <span class="req">*</span></label>
+          <textarea name="resumen_corto" rows="3">Bachiller con experiencia en atención al cliente, manejo de caja, logística de eventos y fotografía profesional. Adaptable, organizado y con habilidades en herramientas digitales (Adobe Suite, Office, Google Workspace).</textarea>
+        </div>
+        <div class="field">
+          <label>Bio para Torre.ai (primera persona, auténtica) <span class="opt">opcional</span></label>
+          <textarea name="bio_torre" rows="3">Soy Nicolás, fotógrafo freelance y auxiliar operativo con 3 años de experiencia en eventos, atención al cliente y gestión administrativa. Me apasiona la fotografía y el trabajo en equipo. Busco crecer en un entorno dinámico donde pueda aportar mis habilidades digitales y mi actitud proactiva.</textarea>
+          <p class="hint">Torre.ai no usa CV tradicional — usa una bio en primera persona que conecte con el reclutador. Hazla auténtica y breve.</p>
+        </div>
+        <div class="field">
+          <label>Titular profesional para LinkedIn <span class="req">*</span></label>
+          <input type="text" name="titular_linkedin" value="Fotógrafo Freelance · Auxiliar Operativo · Atención al Cliente · Bogotá · Abierto a oportunidades">
+          <p class="hint">Máximo ~120 caracteres. Es lo primero que ven los reclutadores en LinkedIn. Incluye ciudad — facilita aparecer en búsquedas locales.</p>
+        </div>
+        <div class="field">
+          <label>Habilidades principales (separadas por coma) <span class="req">*</span></label>
+          <textarea name="habilidades" rows="3">Atención al cliente, Manejo de caja, Apoyo logístico en eventos, Gestión del tiempo, Comunicación efectiva, Trabajo en equipo, Resolución de problemas, Adaptabilidad, Fotografía y edición, Adobe Photoshop, Adobe Lightroom, Adobe Premiere, Microsoft Office, Google Workspace</textarea>
+        </div>
+        <div class="field">
+          <label>Idiomas <span class="req">*</span></label>
+          <input type="text" name="idiomas" value="Español — Nativo | Inglés — Intermedio (B1 aprox.)" class="prefilled">
+        </div>
+        <div class="field">
+          <label>URL personalizada LinkedIn <span class="opt">opcional</span></label>
+          <input type="text" name="linkedin_url" placeholder="Ej: linkedin.com/in/nicolasriano-bogota">
+          <p class="hint">LinkedIn permite personalizar la URL del perfil. Ej: /in/nicolas-riano-beltran. Se configura después de crear la cuenta, en la sección "Editar perfil público".</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 8 — PREFERENCIAS LABORALES
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="8">
+    <div class="section-head" onclick="toggleSection(8)">
+      <div class="section-icon">💼</div>
+      <div class="section-title-text">
+        <strong>Preferencias laborales</strong>
+        <span>Salario, disponibilidad, modalidad y tipo de trabajo buscado</span>
+      </div>
+      <span class="section-completion" id="comp-8">—</span>
+      <span class="section-chevron" id="chev-8">▼</span>
+    </div>
+    <div class="section-body" id="body-8">
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>Pretensión salarial <span class="req">*</span></label>
+          <select name="pretension_salarial">
+            <option value="">Seleccionar...</option>
+            <option>1 SMMLV ($1.423.500 COP)</option>
+            <option>1 – 1.5 SMMLV</option>
+            <option>1.5 – 2 SMMLV</option>
+            <option>A convenir según el cargo</option>
+          </select>
+          <p class="hint">El SMMLV 2025 en Colombia es $1.423.500. Para primer empleo formal sin experiencia certificada, 1 SMMLV es lo más realista.</p>
+        </div>
+        <div class="field">
+          <label>Disponibilidad para iniciar <span class="req">*</span></label>
+          <select name="disponibilidad_inicio">
+            <option value="">Seleccionar...</option>
+            <option>Inmediata</option>
+            <option>En 15 días</option>
+            <option>En 1 mes</option>
+            <option>Otra fecha</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Disponibilidad para viajar <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="disponibilidad_viajar" value="Sí"><span>Sí</span></label>
+            <label class="radio-option"><input type="radio" name="disponibilidad_viajar" value="No"><span>No</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Disponibilidad cambio de ciudad <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="disponibilidad_ciudad" value="Sí"><span>Sí</span></label>
+            <label class="radio-option"><input type="radio" name="disponibilidad_ciudad" value="No"><span>No</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Turno de trabajo preferido <span class="opt">opcional</span></label>
+          <select name="turno_preferido">
+            <option value="">Seleccionar...</option>
+            <option>Diurno (6am – 6pm)</option>
+            <option>Nocturno (6pm – 6am)</option>
+            <option>Mixto / Rotativo</option>
+            <option>Fines de semana incluidos</option>
+            <option>Sin preferencia</option>
+          </select>
+          <p class="hint">Computrabajo lo pide en el registro. Ser flexible aumenta las oportunidades.</p>
+        </div>
+        <div class="field">
+          <label>Disponibilidad fines de semana <span class="opt">opcional</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="fines_semana" value="Sí, disponible"><span>Sí</span></label>
+            <label class="radio-option"><input type="radio" name="fines_semana" value="No, solo entre semana"><span>No</span></label>
+            <label class="radio-option"><input type="radio" name="fines_semana" value="Ocasionalmente"><span>Ocasionalmente</span></label>
+          </div>
+        </div>
+        <div class="field span-full">
+          <label>Modalidad de trabajo preferida <span class="req">*</span></label>
+          <div class="check-group">
+            <label class="check-option"><input type="checkbox" name="modalidad" value="Presencial"><span>Presencial</span></label>
+            <label class="check-option"><input type="checkbox" name="modalidad" value="Remoto"><span>Remoto</span></label>
+            <label class="check-option"><input type="checkbox" name="modalidad" value="Híbrido"><span>Híbrido</span></label>
+            <label class="check-option"><input type="checkbox" name="modalidad" value="Cualquiera"><span>Cualquiera</span></label>
+          </div>
+        </div>
+        <div class="field span-full">
+          <label>Sectores de interés <span class="opt">opcional</span></label>
+          <div class="check-group">
+            <label class="check-option"><input type="checkbox" name="sector_interes" value="Retail y comercio"><span>Retail y comercio</span></label>
+            <label class="check-option"><input type="checkbox" name="sector_interes" value="Atención al cliente / BPO"><span>Atención al cliente</span></label>
+            <label class="check-option"><input type="checkbox" name="sector_interes" value="Logística y eventos"><span>Logística y eventos</span></label>
+            <label class="check-option"><input type="checkbox" name="sector_interes" value="Fotografía y medios"><span>Fotografía y medios</span></label>
+            <label class="check-option"><input type="checkbox" name="sector_interes" value="Marketing digital"><span>Marketing digital</span></label>
+            <label class="check-option"><input type="checkbox" name="sector_interes" value="Gastronomía / Alimentos"><span>Gastronomía</span></label>
+          </div>
+        </div>
+        <div class="field span-full">
+          <label>Cargos de interés principales <span class="opt">opcional</span></label>
+          <input type="text" name="cargos_interes" placeholder="Ej: Auxiliar de punto de venta, Asesor de servicio al cliente, Fotógrafo Jr...">
+          <p class="hint">Estas palabras clave se usan para configurar alertas en todas las plataformas.</p>
+        </div>
+        <div class="field span-full">
+          <label>Nota adicional <span class="opt">opcional</span></label>
+          <textarea name="nota_adicional" placeholder="Cualquier dato que quieras recordar al crear los perfiles..." rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 9 — REFERENCIAS
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="9">
+    <div class="section-head" onclick="toggleSection(9)">
+      <div class="section-icon">👥</div>
+      <div class="section-title-text">
+        <strong>Referencias personales y laborales</strong>
+        <span>El Empleo y el SENA SPE las piden en el registro — ten 2 listas mínimo</span>
+      </div>
+      <span class="section-completion" id="comp-9">—</span>
+      <span class="section-chevron" id="chev-9">▼</span>
+    </div>
+    <div class="section-body" id="body-9">
+      <div class="form-grid cols-1">
+        <div class="inline-info">💡 <strong>¿Por qué son importantes?</strong> Las referencias son personas que pueden hablar bien de Nicolás ante un reclutador. El Empleo las pide directamente en el registro del perfil. Otras plataformas no las piden en el registro pero sí durante los procesos de selección. Escoge personas que lo conozcan bien: familiares adultos, vecinos conocidos, clientes de fotografía, conocidos de confianza. No necesitan ser jefes anteriores para ser válidas.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+        <div class="ref-card">
+          <div class="ref-card-title">Referencia 1</div>
+          <div class="form-grid cols-1">
+            <div class="field">
+              <label>Nombre completo <span class="req">*</span></label>
+              <input type="text" name="ref1_nombre" placeholder="Nombre y apellidos">
+            </div>
+            <div class="field">
+              <label>Número de celular <span class="req">*</span></label>
+              <input type="tel" name="ref1_telefono" placeholder="+57 300 000 0000">
+            </div>
+            <div class="field">
+              <label>Ocupación <span class="opt">opcional</span></label>
+              <input type="text" name="ref1_ocupacion" placeholder="Ej: Comerciante, Docente, Ingeniero...">
+            </div>
+            <div class="field">
+              <label>Relación con Nicolás <span class="req">*</span></label>
+              <select name="ref1_relacion">
+                <option value="">Seleccionar...</option>
+                <option>Familiar (tío, primo, etc.)</option>
+                <option>Amigo/a de confianza</option>
+                <option>Cliente de fotografía</option>
+                <option>Conocido del vecindario</option>
+                <option>Compañero de estudios</option>
+                <option>Jefe o empleador anterior</option>
+                <option>Profesor o tutor</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Años de conocerse <span class="opt">opcional</span></label>
+              <input type="text" name="ref1_anos" placeholder="Ej: 5 años, desde 2018...">
+            </div>
+          </div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-card-title">Referencia 2</div>
+          <div class="form-grid cols-1">
+            <div class="field">
+              <label>Nombre completo <span class="req">*</span></label>
+              <input type="text" name="ref2_nombre" placeholder="Nombre y apellidos">
+            </div>
+            <div class="field">
+              <label>Número de celular <span class="req">*</span></label>
+              <input type="tel" name="ref2_telefono" placeholder="+57 300 000 0000">
+            </div>
+            <div class="field">
+              <label>Ocupación <span class="opt">opcional</span></label>
+              <input type="text" name="ref2_ocupacion" placeholder="Ej: Comerciante, Docente, Ingeniero...">
+            </div>
+            <div class="field">
+              <label>Relación con Nicolás <span class="req">*</span></label>
+              <select name="ref2_relacion">
+                <option value="">Seleccionar...</option>
+                <option>Familiar (tío, primo, etc.)</option>
+                <option>Amigo/a de confianza</option>
+                <option>Cliente de fotografía</option>
+                <option>Conocido del vecindario</option>
+                <option>Compañero de estudios</option>
+                <option>Jefe o empleador anterior</option>
+                <option>Profesor o tutor</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Años de conocerse <span class="opt">opcional</span></label>
+              <input type="text" name="ref2_anos" placeholder="Ej: 3 años, desde 2020...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-grid cols-1" style="margin-top:16px;">
+        <div class="ref-card">
+          <div class="ref-card-title">Referencia 3 (extra — muy recomendada)</div>
+          <div class="form-grid cols-2">
+            <div class="field">
+              <label>Nombre completo <span class="opt">opcional</span></label>
+              <input type="text" name="ref3_nombre" placeholder="Nombre y apellidos">
+            </div>
+            <div class="field">
+              <label>Número de celular <span class="opt">opcional</span></label>
+              <input type="tel" name="ref3_telefono" placeholder="+57 300 000 0000">
+            </div>
+            <div class="field">
+              <label>Relación con Nicolás <span class="opt">opcional</span></label>
+              <select name="ref3_relacion">
+                <option value="">Seleccionar...</option>
+                <option>Familiar (tío, primo, etc.)</option>
+                <option>Amigo/a de confianza</option>
+                <option>Cliente de fotografía</option>
+                <option>Conocido del vecindario</option>
+                <option>Compañero de estudios</option>
+                <option>Jefe o empleador anterior</option>
+                <option>Profesor o tutor</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Ocupación <span class="opt">opcional</span></label>
+              <input type="text" name="ref3_ocupacion" placeholder="Ej: Comerciante, Docente...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 10 — DATOS ADICIONALES
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="10">
+    <div class="section-head" onclick="toggleSection(10)">
+      <div class="section-icon">🚗</div>
+      <div class="section-title-text">
+        <strong>Datos adicionales del perfil</strong>
+        <span>Licencia de conducción, vehículo, RUT, EPS, AFP y contacto de emergencia</span>
+      </div>
+      <span class="section-completion" id="comp-10">—</span>
+      <span class="section-chevron" id="chev-10">▼</span>
+    </div>
+    <div class="section-body" id="body-10">
+      <div class="form-grid cols-1">
+        <div class="inline-info">💡 Estos datos los piden diferentes plataformas en distintos momentos. Tenerlos listos evita tener que preguntar en medio del registro y perder el hilo.</div>
+      </div>
+      <div class="sub-label" style="margin-top:16px;">Movilidad</div>
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>¿Tiene licencia de conducción? <span class="opt">opcional</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="tiene_licencia" value="Sí"><span>Sí</span></label>
+            <label class="radio-option"><input type="radio" name="tiene_licencia" value="No"><span>No</span></label>
+            <label class="radio-option"><input type="radio" name="tiene_licencia" value="En trámite"><span>En trámite</span></label>
+          </div>
+          <p class="hint">Algunas vacantes de mensajería, domicilios o logística la exigen.</p>
+        </div>
+        <div class="field">
+          <label>Categoría de licencia (si aplica) <span class="opt">opcional</span></label>
+          <select name="categoria_licencia">
+            <option value="">Seleccionar si aplica...</option>
+            <option>A1 — Moto hasta 125cc</option>
+            <option>A2 — Moto más de 125cc</option>
+            <option>B1 — Automóvil / Campero</option>
+            <option>B2 — Camión ligero</option>
+            <option>C1 — Vehículo de carga</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>¿Tiene vehículo propio? <span class="opt">opcional</span></label>
+          <select name="vehiculo_propio">
+            <option value="">Seleccionar...</option>
+            <option>No tengo vehículo</option>
+            <option>Motocicleta</option>
+            <option>Automóvil</option>
+            <option>Bicicleta</option>
+          </select>
+          <p class="hint">Roles de mensajería y domicilios suelen pedir motocicleta propia.</p>
+        </div>
+      </div>
+      <div class="sub-divider"></div>
+      <div class="sub-label">Datos fiscales y de seguridad social</div>
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>¿Tiene RUT activo? <span class="opt">opcional</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="tiene_rut" value="Sí, activo"><span>Sí, activo</span></label>
+            <label class="radio-option"><input type="radio" name="tiene_rut" value="No tengo"><span>No tengo</span></label>
+            <label class="radio-option"><input type="radio" name="tiene_rut" value="En trámite"><span>En trámite</span></label>
+          </div>
+          <p class="hint">Necesario si trabaja como independiente o freelance. Lo expide la DIAN gratis en línea.</p>
+        </div>
+        <div class="field">
+          <label>EPS (Entidad Promotora de Salud) <span class="opt">opcional</span></label>
+          <select name="eps">
+            <option value="">Seleccionar si aplica...</option>
+            <option>No estoy afiliado actualmente</option>
+            <option>Sura</option><option>Sanitas</option><option>Compensar</option>
+            <option>Nueva EPS</option><option>Famisanar</option><option>Coosalud</option>
+            <option>Medimás</option><option>Salud Total</option><option>Otra</option>
+          </select>
+          <p class="hint">El SENA SPE lo pide en el registro. Al conseguir empleo formal, la empresa afilia al empleado.</p>
+        </div>
+        <div class="field">
+          <label>AFP (Fondo de Pensiones) <span class="opt">opcional</span></label>
+          <select name="afp">
+            <option value="">Seleccionar si aplica...</option>
+            <option>No estoy afiliado actualmente</option>
+            <option>Colpensiones</option><option>Porvenir</option>
+            <option>Protección</option><option>Colfondos</option><option>Otro</option>
+          </select>
+          <p class="hint">Al igual que la EPS, la empresa lo afilia cuando hay contrato formal.</p>
+        </div>
+        <div class="field">
+          <label>Caja de Compensación Familiar <span class="opt">opcional</span></label>
+          <select name="caja_compensacion">
+            <option value="">Seleccionar si aplica...</option>
+            <option>No estoy afiliado actualmente</option>
+            <option>Compensar</option><option>Colsubsidio</option>
+            <option>Cafam</option><option>Comfenalco</option><option>Otra</option>
+          </select>
+        </div>
+      </div>
+      <div class="sub-divider"></div>
+      <div class="sub-label">Contacto de emergencia</div>
+      <div class="form-grid cols-2">
+        <div class="field">
+          <label>Nombre del contacto <span class="opt">opcional</span></label>
+          <input type="text" name="emergencia_nombre" placeholder="Nombre completo">
+          <p class="hint">Algunas empresas lo piden durante el proceso de contratación. Tenerlo listo agiliza todo.</p>
+        </div>
+        <div class="field">
+          <label>Teléfono del contacto <span class="opt">opcional</span></label>
+          <input type="tel" name="emergencia_telefono" placeholder="+57 300 000 0000">
+        </div>
+        <div class="field">
+          <label>Relación con Nicolás <span class="opt">opcional</span></label>
+          <input type="text" name="emergencia_relacion" placeholder="Ej: Madre, Padre, Hermano/a, Pareja...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECCIÓN 11 — CURSOS Y CERTIFICACIONES
+  ══════════════════════════════════════ -->
+  <div class="form-section" data-section="11">
+    <div class="section-head" onclick="toggleSection(11)">
+      <div class="section-icon">📚</div>
+      <div class="section-title-text">
+        <strong>Cursos, certificaciones y formación adicional</strong>
+        <span>Cursos del SENA, talleres, certificados digitales — todo suma al perfil</span>
+      </div>
+      <span class="section-completion" id="comp-11">—</span>
+      <span class="section-chevron" id="chev-11">▼</span>
+    </div>
+    <div class="section-body" id="body-11">
+      <div class="form-grid cols-1">
+        <div class="inline-info">💡 <strong>¿Por qué importan los cursos?</strong> Para perfiles de bachiller, los cursos adicionales compensan la falta de título universitario. Un curso gratuito del SENA (servicio al cliente, ofimática, Excel) o un certificado de Google o Coursera puede marcar la diferencia frente a otro candidato con el mismo nivel educativo. Plataformas como LinkedIn y Torre los muestran de manera prominente.</div>
+        <div class="inline-note" style="margin-top:8px;">🎓 <strong>Si no tiene cursos aún:</strong> El SENA ofrece formación gratuita en línea en sofia.senasofiaplus.edu.co — cursos de Excel, servicio al cliente, fotografía, logística. Completar uno ahora (toman 40–80 horas) fortalece el perfil significativamente.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:16px;">
+
+        <div class="ref-card">
+          <div class="ref-card-title">Curso / Certificación 1</div>
+          <div class="form-grid cols-2">
+            <div class="field">
+              <label>Nombre del curso <span class="opt">opcional</span></label>
+              <input type="text" name="curso1_nombre" placeholder="Ej: Excel Básico, Servicio al Cliente...">
+            </div>
+            <div class="field">
+              <label>Institución que lo otorgó <span class="opt">opcional</span></label>
+              <input type="text" name="curso1_institucion" placeholder="Ej: SENA, Coursera, Google, Udemy...">
+            </div>
+            <div class="field">
+              <label>Año de finalización <span class="opt">opcional</span></label>
+              <input type="text" name="curso1_ano" placeholder="Ej: 2023">
+            </div>
+            <div class="field">
+              <label>Duración <span class="opt">opcional</span></label>
+              <input type="text" name="curso1_duracion" placeholder="Ej: 40 horas, 3 semanas...">
+            </div>
+            <div class="field span-2">
+              <label>Link del certificado (si es digital) <span class="opt">opcional</span></label>
+              <input type="text" name="curso1_link" placeholder="Ej: link de Coursera, LinkedIn Learning, SENA...">
+              <p class="hint">Un certificado digital con link público se puede agregar directamente en LinkedIn y Torre.ai.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-card-title">Curso / Certificación 2</div>
+          <div class="form-grid cols-2">
+            <div class="field">
+              <label>Nombre del curso <span class="opt">opcional</span></label>
+              <input type="text" name="curso2_nombre" placeholder="Ej: Fotografía Digital, Marketing...">
+            </div>
+            <div class="field">
+              <label>Institución que lo otorgó <span class="opt">opcional</span></label>
+              <input type="text" name="curso2_institucion" placeholder="Ej: SENA, Platzi, YouTube Certificates...">
+            </div>
+            <div class="field">
+              <label>Año de finalización <span class="opt">opcional</span></label>
+              <input type="text" name="curso2_ano" placeholder="Ej: 2024">
+            </div>
+            <div class="field">
+              <label>Duración <span class="opt">opcional</span></label>
+              <input type="text" name="curso2_duracion" placeholder="Ej: 60 horas, 1 mes...">
+            </div>
+            <div class="field span-2">
+              <label>Link del certificado (si es digital) <span class="opt">opcional</span></label>
+              <input type="text" name="curso2_link" placeholder="Link del certificado en línea">
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-card-title">Curso / Certificación 3</div>
+          <div class="form-grid cols-2">
+            <div class="field">
+              <label>Nombre del curso <span class="opt">opcional</span></label>
+              <input type="text" name="curso3_nombre" placeholder="Ej: Adobe Photoshop, Lightroom...">
+            </div>
+            <div class="field">
+              <label>Institución que lo otorgó <span class="opt">opcional</span></label>
+              <input type="text" name="curso3_institucion" placeholder="Ej: Adobe, LinkedIn Learning...">
+            </div>
+            <div class="field">
+              <label>Año de finalización <span class="opt">opcional</span></label>
+              <input type="text" name="curso3_ano" placeholder="Ej: 2022">
+            </div>
+            <div class="field">
+              <label>Duración <span class="opt">opcional</span></label>
+              <input type="text" name="curso3_duracion" placeholder="Ej: 20 horas...">
+            </div>
+            <div class="field span-2">
+              <label>Link del certificado (si es digital) <span class="opt">opcional</span></label>
+              <input type="text" name="curso3_link" placeholder="Link del certificado en línea">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SUBMIT
+  ══════════════════════════════════════ -->
+  <div class="submit-area">
+    <p>Al hacer clic, toda la información de las 12 secciones y las plataformas seleccionadas se envía a <strong>Alejo.b.mateus@gmail.com</strong> a través de Formspree.<br>No hay datos obligatorios bloqueantes — envía con lo que tengas listo.</p>
+    <button type="submit" class="btn-submit" id="btn-submit">
+      <div class="spinner"></div>
+      <span class="btn-text">📨 Enviar todo al correo</span>
+    </button>
+    <div id="status-msg"></div>
+  </div>
+
+</form>
+</main>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+const FORMSPREE_URL = 'https://formspree.io/f/xjgjdyvn';
+const TOTAL_SECTIONS = 12;
+
+// ── Platform interest tips ─────────────────────────
+const TIPS = {
+  computrabajo: '💡 Sube también el PDF del CV como adjunto. Completa el perfil al 100% — aparece primero en las búsquedas de reclutadores.',
+  elempleo:     '💡 Ten lista la libreta militar y los teléfonos de 2 referencias antes de empezar. Es la que más datos pide pero accede a los mejores trabajos formales.',
+  indeed:       '💡 Entra con la cuenta de Google y sube el PDF del CV. Indeed procesa todo automáticamente en 2 minutos. Revisa los datos antes de guardar.',
+  magneto:      '💡 Completa los tests de habilidades que recomienda Magneto — pueden duplicar la visibilidad del perfil ante reclutadores.',
+  linkedin:     '💡 Activa "Abierto a trabajar" una vez creado el perfil. Personaliza la URL a linkedin.com/in/nicolas-riano para que sea fácil de compartir.',
+  bumeran:      '💡 Activa las alertas de correo para recibir vacantes nuevas cada día. Con los datos básicos tienes un perfil funcional en 20 minutos.',
+  torre:        '💡 Agrega el link del Instagram fotográfico de Nicolás. En Torre el portafolio visual vale más que el CV. Marca Fotografía con nivel 4 o 5.',
+  sena:         '💡 Plataforma estatal poco conocida pero valiosa. Muchas empresas grandes deben publicar sus vacantes de bachiller aquí por ley.'
+};
+
+// ── Platform interest state ────────────────────────
+const interests = {};
+
+function setInterest(platform, value, btn) {
+  interests[platform] = value;
+  document.getElementById('int_' + platform).value = value;
+
+  const card = document.getElementById('card_' + platform);
+  const buttons = card.querySelectorAll('.int-btn');
+  buttons.forEach(function(b) {
+    b.classList.remove('active-si', 'active-talvez', 'active-no');
+  });
+  btn.classList.add('active-' + value);
+
+  card.classList.remove('selected-si', 'selected-no');
+  if (value === 'si') card.classList.add('selected-si');
+  if (value === 'no') card.classList.add('selected-no');
+
+  const tip = document.getElementById('tip_' + platform);
+  if (value === 'si') {
+    tip.textContent = TIPS[platform] || '';
+    tip.classList.add('visible');
+  } else {
+    tip.classList.remove('visible');
+  }
+
+  updateProgress();
+}
+
+// ── Accordion ─────────────────────────────────────
+function toggleSection(i) {
+  var body = document.getElementById('body-' + i);
+  var chev = document.getElementById('chev-' + i);
+  var isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  chev.classList.toggle('open', !isOpen);
+}
+
+// ── Progress ──────────────────────────────────────
+function isSectionComplete(i) {
+  var body = document.getElementById('body-' + i);
+
+  if (i === 0) {
+    return Object.keys(interests).length >= 3;
+  }
+
+  var inputs = Array.from(body.querySelectorAll(
+    'input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="month"], select, textarea'
+  ));
+  if (inputs.length === 0) return true;
+  var filled = inputs.filter(function(f) {
+    return f.value && f.value.trim() !== '';
+  }).length;
+  return filled >= Math.ceil(inputs.length * 0.5);
+}
+
+function updateProgress() {
+  var done = 0;
+  for (var i = 0; i < TOTAL_SECTIONS; i++) {
+    var ok = isSectionComplete(i);
+    var comp = document.getElementById('comp-' + i);
+    comp.textContent = ok ? '✓ Listo' : 'Pendiente';
+    comp.style.background = ok ? 'var(--green-bg)' : 'var(--teal-light)';
+    comp.style.color = ok ? 'var(--green)' : 'var(--teal)';
+    if (ok) done++;
+  }
+  var pct = Math.round((done / TOTAL_SECTIONS) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = done + ' de ' + TOTAL_SECTIONS + ' secciones completadas';
+  document.getElementById('progress-pct').textContent = pct + '%';
+}
+
+document.getElementById('main-form').addEventListener('input', updateProgress);
+document.getElementById('main-form').addEventListener('change', updateProgress);
+updateProgress();
+
+// ── Submit ────────────────────────────────────────
+document.getElementById('main-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('btn-submit');
+  var status = document.getElementById('status-msg');
+
+  btn.disabled = true;
+  btn.classList.add('loading');
+  status.style.display = 'none';
+
+  try {
+    var data = new FormData(this);
+    var res = await fetch(FORMSPREE_URL, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      btn.classList.remove('loading');
+      btn.textContent = '✅ Enviado correctamente';
+      btn.style.background = 'var(--green)';
+      status.className = 'success';
+      status.innerHTML = '✅ <strong>¡Datos enviados a Alejo.b.mateus@gmail.com!</strong> Revisa tu bandeja de entrada — llegará un mensaje de Formspree con toda la información de Nicolás lista para usar en cada plataforma.';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    } else {
+      var json = await res.json();
+      throw new Error((json && json.errors && json.errors[0] && json.errors[0].message) || 'Error desconocido');
+    }
+  } catch (err) {
+    btn.disabled = false;
+    btn.classList.remove('loading');
+    status.className = 'error';
+    status.innerHTML = '❌ <strong>No se pudo enviar.</strong> Error: ' + err.message + '. Verifica tu conexión a internet e intenta de nuevo.';
+  }
+});
+</script>
+</body>
+</html>
